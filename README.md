@@ -76,7 +76,7 @@ cloud-driver/
 │   ├── package.json       # Node 依赖
 │   └── vite.config.js     # Vite 配置
 │
-├── frontend-vant/          # 移动端前端
+├── frontend-vant/          # 移动端前端 (端口 29002)
 │   ├── src/
 │   └── package.json
 │
@@ -115,12 +115,12 @@ uvicorn main:app --host 0.0.0.0 --port 29000 --reload
 ### 前端启动
 
 ```bash
-# 桌面端
+# 桌面端 (端口 29001)
 cd frontend
 npm install
-npm run dev  # 端口 29001
+npm run dev
 
-# 移动端
+# 移动端 (端口 29002)
 cd frontend-vant
 npm install
 npm run dev
