@@ -1,0 +1,205 @@
+:root {
+  --bg-primary: #f7f8fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f2f5;
+  --text-primary: #323233;
+  --text-secondary: #646566;
+  --text-placeholder: #969799;
+  --border-color: #ebedf0;
+  --shadow-color: rgba(0, 0, 0, 0.06);
+  --accent-color: #1989fa;
+}
+
+html.dark {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-placeholder: #808080;
+  --border-color: #3a3a5c;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --accent-color: #1989fa;
+}
+
+html.dark .van-nav-bar {
+  background: var(--bg-secondary) !important;
+}
+html.dark .van-nav-bar__title {
+  color: var(--text-primary) !important;
+}
+html.dark .van-cell-group,
+html.dark .van-cell {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+html.dark .van-cell::after {
+  border-color: var(--border-color) !important;
+}
+html.dark .van-field__control {
+  color: var(--text-primary) !important;
+}
+html.dark .van-popup {
+  background: var(--bg-secondary) !important;
+}
+html.dark .van-dialog {
+  background: var(--bg-secondary) !important;
+}
+html.dark .van-action-sheet {
+  background: var(--bg-secondary) !important;
+}
+html.dark .van-sidebar {
+  background: var(--bg-secondary) !important;
+}
+html.dark .van-sidebar-item {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+}
+html.dark .van-sidebar-item--select {
+  background: var(--bg-secondary) !important;
+  color: var(--accent-color) !important;
+}
+html.dark .van-tabbar {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+html.dark body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* 工具类 */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 8px; }
+.gap-4 { gap: 16px; }
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 16px; }
+.mb-2 { margin-bottom: 8px; }
+.mb-4 { margin-bottom: 16px; }
+.mr-2 { margin-right: 8px; }
+.mr-4 { margin-right: 16px; }
+.ml-2 { margin-left: 8px; }
+.ml-4 { margin-left: 16px; }
+.text-sm { font-size: 13px; }
+.text-xs { font-size: 12px; }
+.text-muted { color: var(--text-placeholder); }
+.text-center { text-align: center; }
+.w-full { width: 100%; }
+
+/* 文件网格 */
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.file-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-card:active {
+  transform: scale(0.96);
+}
+
+.file-icon { font-size: 36px; margin-bottom: 6px; }
+
+.file-name {
+  font-size: 12px;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-size {
+  font-size: 10px;
+  color: var(--text-placeholder);
+  margin-top: 2px;
+}
+
+/* 面包屑路径栏 */
+.path-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.path-item {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.path-separator { color: var(--text-placeholder); margin: 0 2px; }
+
+.path-current {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* 列表视图 */
+.file-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  background: var(--bg-secondary);
+}
+
+.file-list-item:active {
+  background: var(--bg-tertiary);
+}
+
+.file-list-icon {
+  font-size: 28px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.file-list-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-list-name {
+  font-size: 14px;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-list-meta {
+  font-size: 12px;
+  color: var(--text-placeholder);
+  margin-top: 2px;
+}
+
+.file-list-actions {
+  flex-shrink: 0;
+  margin-left: 8px;
+}
